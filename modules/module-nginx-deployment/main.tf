@@ -9,7 +9,7 @@ resource "kubernetes_deployment" "deploy_nginx" {
     name      = var.deploy_name
     namespace = kubernetes_namespace.ns_dev.metadata.0.name
   }
-    spec {
+  spec {
     replicas = 2
     selector {
       match_labels = {

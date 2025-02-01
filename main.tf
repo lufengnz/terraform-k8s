@@ -10,3 +10,6 @@ data "kubernetes_nodes" "app_web" {
   }
 }
 
+module "nginx_lb" {
+  source = "./modules/module-service"
+}
